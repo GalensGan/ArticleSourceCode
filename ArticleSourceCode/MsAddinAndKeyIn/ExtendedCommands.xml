@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KeyinTree xmlns="http://www.bentley.com/schemas/1.0/MicroStation/AddIn/KeyinTree.xsd">
+<!--属性中一定要设置成嵌入的资源-->
+  <!--一级Keyin-->
+  <RootKeyinTable ID="root">
+    <Keyword SubtableRef="Commands" CommandWord="Test">
+      <Options Required="true" />
+    </Keyword>
+  </RootKeyinTable>
+  <!--二级Keyin,可以只有两级命令-->
+  <SubKeyinTables>
+    <KeyinTable ID="Commands">
+      <Keyword SubtableRef="MessageManagerCmd" CommandWord="Message">
+        <Options Required="true" />
+      </Keyword>
+    </KeyinTable>
+    <!--三级Keyin-->
+    <KeyinTable ID="MessageManagerCmd">
+      <Keyword CommandWord="Manager" />
+    </KeyinTable>
+  </SubKeyinTables>
+  <!--keyin对应方法入口-->
+  <KeyinHandlers>
+    <KeyinHandler Keyin="Test Message Manager"            Function="ArticleSourceCode.MsAddinAndKeyIn.KeyinAccess.MessageManagerAccess"/>
+  </KeyinHandlers>
+</KeyinTree>

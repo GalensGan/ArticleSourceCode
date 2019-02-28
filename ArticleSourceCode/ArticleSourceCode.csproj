@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>8aea1ecc-b823-42a1-af2a-04fcd6bd6e98</ProjectGuid>
+    <ProjectGuid>{8AEA1ECC-B823-42A1-AF2A-04FCD6BD6E98}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ArticleSourceCode</RootNamespace>
@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>$(MS)Mdlapps\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -31,24 +31,80 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Bentley.DgnDisplayNet">
+      <HintPath>$(MS)Bentley.DgnDisplayNet.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.DgnPlatformNET">
+      <HintPath>$(MS)Bentley.DgnPlatformNET.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.ECObjects3">
+      <HintPath>$(MS)Assemblies\ECFramework\Bentley.ECObjects3.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.General.1.0">
+      <HintPath>$(MS)Assemblies\ECFramework\Bentley.General.1.0.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.GeometryNET">
+      <HintPath>$(MS)Bentley.GeometryNET.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.GeometryNET.Common">
+      <HintPath>$(MS)Bentley.GeometryNET.Common.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.GeometryNET.Structs">
+      <HintPath>$(MS)Bentley.GeometryNET.Structs.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.MicroStation.Interfaces.1.0">
+      <HintPath>$(MS)Assemblies\Bentley.MicroStation.Interfaces.1.0.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.Platform">
+      <HintPath>$(MS)Assemblies\ECFramework\Bentley.Platform.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="ConstraintCommonNet">
+      <HintPath>$(MS)Assemblies\ConstraintCommonNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ustation">
+      <HintPath>$(MS)ustation.dll</HintPath>
+      <private>False</private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="MessageManager\MessageHandleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageManager\MessageHandleForm.Designer.cs">
+      <DependentUpon>MessageHandleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MsAddinAndKeyIn\KeyinAccess.cs" />
+    <Compile Include="MsAddinAndKeyIn\MsAddin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+	<EmbeddedResource Include="MsAddinAndKeyIn\ExtendedCommands.xml">
+      <LogicalName>CommandTable.xml</LogicalName>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MessageManager\MessageHandleForm.resx">
+      <DependentUpon>MessageHandleForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
