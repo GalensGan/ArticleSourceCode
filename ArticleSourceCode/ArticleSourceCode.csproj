@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bentley.MicroStation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4bf6c96a266e58d4, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Bentley\OpenRoads Designer CONNECT Edition\OpenRoadsDesigner\Assemblies\Bentley.MicroStation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -85,6 +89,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adaters\AdapterTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adaters\AdapterTest.Designer.cs">
+      <DependentUpon>AdapterTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="MessageManager\MessageHandleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,7 +106,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-	<EmbeddedResource Include="MsAddinAndKeyIn\ExtendedCommands.xml">
+    <EmbeddedResource Include="Adaters\AdapterTest.resx">
+      <DependentUpon>AdapterTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsAddinAndKeyIn\ExtendedCommands.xml">
       <LogicalName>CommandTable.xml</LogicalName>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -105,6 +118,9 @@
     <EmbeddedResource Include="MessageManager\MessageHandleForm.resx">
       <DependentUpon>MessageHandleForm.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DgnTools\DgnTool\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

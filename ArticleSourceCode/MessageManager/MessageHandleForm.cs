@@ -39,6 +39,7 @@ namespace ArticleSourceCode.MessageManager
                     NotificationManagerOutputPrompt();
                     break;
                 default:
+                    MessageCenterShowInfoMessage();
                     break;
             }
         }
@@ -59,6 +60,10 @@ namespace ArticleSourceCode.MessageManager
         {
             NotificationManager.OutputPrompt("this is ouput prompt");
         }
-        
+
+        private void MessageCenterShowInfoMessage()
+        {
+          string str=  Bentley.MstnPlatformNET.MessageCenter.GetStringFromMessageListResource(0, 0);
+        }
     }
 }

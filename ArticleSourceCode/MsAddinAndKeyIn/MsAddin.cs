@@ -12,9 +12,11 @@ namespace ArticleSourceCode.MsAddinAndKeyIn
     [Bentley.MstnPlatformNET.AddInAttribute(MdlTaskID = "MsAddin")]
     public sealed class MsAddin : Bentley.MstnPlatformNET.AddIn
     {
+        //
+        public static MsAddin Addin { get; private set; }
         private MsAddin(IntPtr mdlDescriptor) : base(mdlDescriptor)
         {
-
+            Addin = this;
         }
         protected override int Run(string[] commandLine)
         {

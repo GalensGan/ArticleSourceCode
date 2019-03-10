@@ -6,6 +6,7 @@
     <Keyword SubtableRef="Commands" CommandWord="Test">
       <Options Required="true" />
     </Keyword>
+    
   </RootKeyinTable>
   <!--二级Keyin,可以只有两级命令-->
   <SubKeyinTables>
@@ -13,7 +14,10 @@
       <Keyword SubtableRef="MessageManagerCmd" CommandWord="Message">
         <Options Required="true" />
       </Keyword>
-    </KeyinTable>
+      <Keyword  CommandWord="Adapters">
+        <Options TryParse="true" />
+      </Keyword>
+    </KeyinTable>      
     <!--三级Keyin-->
     <KeyinTable ID="MessageManagerCmd">
       <Keyword CommandWord="Manager" />
@@ -22,5 +26,6 @@
   <!--keyin对应方法入口-->
   <KeyinHandlers>
     <KeyinHandler Keyin="Test Message Manager"            Function="ArticleSourceCode.MsAddinAndKeyIn.KeyinAccess.MessageManagerAccess"/>
+    <KeyinHandler Keyin="Test Adapters"              Function="ArticleSourceCode.MsAddinAndKeyIn.KeyinAccess.ShowDifferentAdapter"/>
   </KeyinHandlers>
 </KeyinTree>
