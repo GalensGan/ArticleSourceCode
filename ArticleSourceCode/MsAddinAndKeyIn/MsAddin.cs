@@ -9,7 +9,9 @@ namespace ArticleSourceCode.MsAddinAndKeyIn
     /// <summary>
     /// 此类负责在MS加载时预先加载一些内容
     /// </summary>
-    [Bentley.MstnPlatformNET.AddInAttribute(MdlTaskID = "MsAddin")]
+    
+    //下面的一行为该addin的属性,在keyin窗口中可以进行查找到
+    [Bentley.MstnPlatformNET.AddInAttribute(MdlTaskID = "ArticleSourceCode")]
     public sealed class MsAddin : Bentley.MstnPlatformNET.AddIn
     {
         //

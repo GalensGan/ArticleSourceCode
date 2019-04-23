@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,6 +35,7 @@
     <Reference Include="Bentley.MicroStation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4bf6c96a266e58d4, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Bentley\OpenRoads Designer CONNECT Edition\OpenRoadsDesigner\Assemblies\Bentley.MicroStation.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -82,6 +84,7 @@
     </Reference>
     <Reference Include="ConstraintCommonNet">
       <HintPath>$(MS)Assemblies\ConstraintCommonNet.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ustation">
       <HintPath>$(MS)ustation.dll</HintPath>
