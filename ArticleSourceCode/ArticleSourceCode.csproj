@@ -125,5 +125,8 @@
   <ItemGroup>
     <Folder Include="DgnTools\DgnTool\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="FileForDownLoading\SetSwToolsEnvironment.exe" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
