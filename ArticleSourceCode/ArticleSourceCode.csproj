@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>$(MS)Mdlapps\</OutputPath>
+    <OutputPath>$(MS)\Mdlapps\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -34,7 +34,7 @@
   <ItemGroup>
     <Reference Include="Bentley.MicroStation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4bf6c96a266e58d4, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Bentley\OpenRoads Designer CONNECT Edition\OpenRoadsDesigner\Assemblies\Bentley.MicroStation.dll</HintPath>
+      <HintPath>$(MS)\Assemblies\Bentley.MicroStation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -47,47 +47,47 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Bentley.DgnDisplayNet">
-      <HintPath>$(MS)Bentley.DgnDisplayNet.dll</HintPath>
+      <HintPath>$(MS)\Bentley.DgnDisplayNet.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.DgnPlatformNET">
-      <HintPath>$(MS)Bentley.DgnPlatformNET.dll</HintPath>
+      <HintPath>$(MS)\Bentley.DgnPlatformNET.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.ECObjects3">
-      <HintPath>$(MS)Assemblies\ECFramework\Bentley.ECObjects3.dll</HintPath>
+      <HintPath>$(MS)\Assemblies\ECFramework\Bentley.ECObjects3.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.General.1.0">
-      <HintPath>$(MS)Assemblies\ECFramework\Bentley.General.1.0.dll</HintPath>
+      <HintPath>$(MS)\Assemblies\ECFramework\Bentley.General.1.0.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.GeometryNET">
-      <HintPath>$(MS)Bentley.GeometryNET.dll</HintPath>
+      <HintPath>$(MS)\Bentley.GeometryNET.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.GeometryNET.Common">
-      <HintPath>$(MS)Bentley.GeometryNET.Common.dll</HintPath>
+      <HintPath>$(MS)\Bentley.GeometryNET.Common.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.GeometryNET.Structs">
-      <HintPath>$(MS)Bentley.GeometryNET.Structs.dll</HintPath>
+      <HintPath>$(MS)\Bentley.GeometryNET.Structs.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.MicroStation.Interfaces.1.0">
-      <HintPath>$(MS)Assemblies\Bentley.MicroStation.Interfaces.1.0.dll</HintPath>
+      <HintPath>$(MS)\Assemblies\Bentley.MicroStation.Interfaces.1.0.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.Platform">
-      <HintPath>$(MS)Assemblies\ECFramework\Bentley.Platform.dll</HintPath>
+      <HintPath>$(MS)\Assemblies\ECFramework\Bentley.Platform.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="ConstraintCommonNet">
-      <HintPath>$(MS)Assemblies\ConstraintCommonNet.dll</HintPath>
+      <HintPath>$(MS)\Assemblies\ConstraintCommonNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ustation">
-      <HintPath>$(MS)ustation.dll</HintPath>
+      <HintPath>$(MS)\ustation.dll</HintPath>
       <private>False</private>
     </Reference>
   </ItemGroup>
@@ -124,9 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DgnTools\DgnTool\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="FileForDownLoading\SetSwToolsEnvironment.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
