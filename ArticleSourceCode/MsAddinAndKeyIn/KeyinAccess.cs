@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ArticleSourceCode;
+using ArticleSourceCode.DgnTools;
 
 namespace ArticleSourceCode.MsAddinAndKeyIn
 {
@@ -19,6 +20,12 @@ namespace ArticleSourceCode.MsAddinAndKeyIn
         public static void ShowDifferentAdapter(string unparsed)
         {
             Adaters.AdapterTest.ShowDifferentAdapter(unparsed);
+        }
+
+        // 测试 dgnTool
+        public static void TestDgnTool(string unparsed)
+        {
+            NewToolFactory.TestDgnPrimitiveTool();
         }
     }
 }

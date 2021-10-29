@@ -9,15 +9,16 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ArticleSourceCode</RootNamespace>
     <AssemblyName>ArticleSourceCode</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>$(MS)\Mdlapps\</OutputPath>
+    <OutputPath>C:\sw_Bentley\OpenRoads\sw_Standards\mdlapps\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -37,9 +38,14 @@
       <HintPath>$(MS)\Assemblies\Bentley.MicroStation.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -98,6 +104,11 @@
     <Compile Include="Adaters\AdapterTest.Designer.cs">
       <DependentUpon>AdapterTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="CurveVectorFraction\CurveVectorFractionTest.cs" />
+    <Compile Include="DgnTools\DgnElementSetToolsTest.cs" />
+    <Compile Include="DgnTools\DgnPrimitiveToolsTest.cs" />
+    <Compile Include="DgnTools\Dump.cs" />
+    <Compile Include="DgnTools\NewToolFactory.cs" />
     <Compile Include="MessageManager\MessageHandleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,7 +134,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DgnTools\DgnTool\" />
+    <None Include="Config\log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

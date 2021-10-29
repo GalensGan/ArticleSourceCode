@@ -14,10 +14,16 @@
       <Keyword SubtableRef="MessageManagerCmd" CommandWord="Message">
         <Options Required="true" />
       </Keyword>
+		
       <Keyword  CommandWord="Adapters">
         <Options TryParse="true" />
       </Keyword>
-    </KeyinTable>      
+	
+	  <Keyword  CommandWord="DgnTool">
+        <Options TryParse="true" />
+      </Keyword>
+    </KeyinTable>    
+	  
     <!--三级Keyin-->
     <KeyinTable ID="MessageManagerCmd">
       <Keyword CommandWord="Manager" />
@@ -27,5 +33,6 @@
   <KeyinHandlers>
     <KeyinHandler Keyin="Test Message Manager"            Function="ArticleSourceCode.MsAddinAndKeyIn.KeyinAccess.MessageManagerAccess"/>
     <KeyinHandler Keyin="Test Adapters"              Function="ArticleSourceCode.MsAddinAndKeyIn.KeyinAccess.ShowDifferentAdapter"/>
+    <KeyinHandler Keyin="Test DgnTool"              Function="ArticleSourceCode.MsAddinAndKeyIn.KeyinAccess.TestDgnTool"/>
   </KeyinHandlers>
 </KeyinTree>

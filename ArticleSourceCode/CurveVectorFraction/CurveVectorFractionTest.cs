@@ -11,5 +11,6 @@ namespace ArticleSourceCode.CurveVectorFraction
     /// </summary>
     class CurveVectorFractionTest
     {
+
     }
 }
