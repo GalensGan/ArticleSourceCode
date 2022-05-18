@@ -16,7 +16,7 @@ namespace ArticleSourceCode.MsAddinAndKeyIn
             MessageManager.MessageHandleForm.InstallNewInstance();
         }
 
-        //adapter测试
+        //adapter测试,unparsed参数录入的不同
         public static void ShowDifferentAdapter(string unparsed)
         {
             Adaters.AdapterTest.ShowDifferentAdapter(unparsed);
