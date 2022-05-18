@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ArticleSourceCode</RootNamespace>
     <AssemblyName>ArticleSourceCode</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,7 +34,7 @@
   <ItemGroup>
     <Reference Include="Bentley.MicroStation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4bf6c96a266e58d4, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Bentley\OpenRoads Designer CONNECT Edition\OpenRoadsDesigner\Assemblies\Bentley.MicroStation.dll</HintPath>
+      <HintPath>${MS}Assemblies\Bentley.MicroStation.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -95,6 +96,7 @@
     <Compile Include="Adaters\AdapterTest.Designer.cs">
       <DependentUpon>AdapterTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="DgnTools\DgnToolFunctionTest.cs" />
     <Compile Include="MessageManager\MessageHandleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,8 +121,6 @@
       <DependentUpon>MessageHandleForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DgnTools\DgnTool\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
