@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>C:\sw_Bentley\OpenRoads\sw_Standards\mdlapps\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -35,12 +35,11 @@
   <ItemGroup>
     <Reference Include="Bentley.MicroStation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4bf6c96a266e58d4, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(Microstation)\Assemblies\Bentley.MicroStation.dll</HintPath>
+      <HintPath>$(MS)\Assemblies\Bentley.MicroStation.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="MSAddinTest, Version=0.3.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\MSAddinTest.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -54,43 +53,47 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Bentley.DgnDisplayNet">
-      <HintPath>$(Microstation)\Bentley.DgnDisplayNet.dll</HintPath>
+      <HintPath>$(MS)\Bentley.DgnDisplayNet.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.DgnPlatformNET">
-      <HintPath>$(Microstation)\Bentley.DgnPlatformNET.dll</HintPath>
+      <HintPath>$(MS)\Bentley.DgnPlatformNET.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.ECObjects3">
-      <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.ECObjects3.dll</HintPath>
+      <HintPath>$(MS)\Assemblies\ECFramework\Bentley.ECObjects3.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.General.1.0">
-      <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.General.1.0.dll</HintPath>
+      <HintPath>$(MS)\Assemblies\ECFramework\Bentley.General.1.0.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.GeometryNET">
-      <HintPath>$(Microstation)\Bentley.GeometryNET.dll</HintPath>
+      <HintPath>$(MS)\Bentley.GeometryNET.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.GeometryNET.Common">
-      <HintPath>$(Microstation)\Bentley.GeometryNET.Common.dll</HintPath>
+      <HintPath>$(MS)\Bentley.GeometryNET.Common.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.GeometryNET.Structs">
-      <HintPath>$(Microstation)\Bentley.GeometryNET.Structs.dll</HintPath>
+      <HintPath>$(MS)\Bentley.GeometryNET.Structs.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.MicroStation.Interfaces.1.0">
-      <HintPath>$(Microstation)\Assemblies\Bentley.MicroStation.Interfaces.1.0.dll</HintPath>
+      <HintPath>$(MS)\Assemblies\Bentley.MicroStation.Interfaces.1.0.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.Platform">
-      <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.Platform.dll</HintPath>
+      <HintPath>$(MS)\Assemblies\ECFramework\Bentley.Platform.dll</HintPath>
       <private>False</private>
     </Reference>
+    <Reference Include="ConstraintCommonNet">
+      <HintPath>$(MS)\Assemblies\ConstraintCommonNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="ustation">
-      <HintPath>$(Microstation)\ustation.dll</HintPath>
+      <HintPath>$(MS)\ustation.dll</HintPath>
       <private>False</private>
     </Reference>
   </ItemGroup>
@@ -112,16 +115,15 @@
     <Compile Include="MessageManager\MessageHandleForm.Designer.cs">
       <DependentUpon>MessageHandleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddinAndKeyIn\KeyinAccess.cs" />
-    <Compile Include="AddinAndKeyIn\MsAddin.cs" />
-    <Compile Include="AddinAndKeyIn\TestIndex.cs" />
+    <Compile Include="MsAddinAndKeyIn\KeyinAccess.cs" />
+    <Compile Include="MsAddinAndKeyIn\MsAddin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Adaters\AdapterTest.resx">
       <DependentUpon>AdapterTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddinAndKeyIn\ExtendedCommands.xml">
+    <EmbeddedResource Include="MsAddinAndKeyIn\ExtendedCommands.xml">
       <LogicalName>CommandTable.xml</LogicalName>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -135,17 +137,7 @@
     <None Include="Config\log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="log4net">
-      <Version>2.0.14</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Utils\Utils.csproj">
-      <Project>{ea6b9871-16b4-4a35-b048-897798d2f857}</Project>
-      <Name>Utils</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

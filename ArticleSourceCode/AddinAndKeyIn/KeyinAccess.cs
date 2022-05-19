@@ -5,9 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using ArticleSourceCode;
 using ArticleSourceCode.DgnTools;
+using MSAddinTest.MSTestInterface;
 
-namespace ArticleSourceCode.MsAddinAndKeyIn
+namespace ArticleSourceCode.AddinAndKeyIn
 {
+    /// <summary>
+    /// 改用 TestIndex 来进行测试
+    /// </summary>
     public sealed class KeyinAccess
     {
         // 消息通知入口
@@ -22,7 +26,7 @@ namespace ArticleSourceCode.MsAddinAndKeyIn
             Adaters.AdapterTest.ShowDifferentAdapter(unparsed);
         }
 
-        // 测试 dgnTool
+        // 测试 dgnTool       
         public static void TestDgnTool(string unparsed)
         {
             NewToolFactory.TestDgnPrimitiveTool();

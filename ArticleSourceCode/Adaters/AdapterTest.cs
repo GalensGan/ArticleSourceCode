@@ -63,22 +63,22 @@ namespace ArticleSourceCode.Adaters
         }
         public void AttachTL()
         {
-            this.AttachAsTopLevelForm(MsAddinAndKeyIn.MsAddin.Addin, true, "AttachAsTopLevelForm");
+            this.AttachAsTopLevelForm(AddinAndKeyIn.MsAddin.Addin, true, "AttachAsTopLevelForm");
             label1.Text = "AttachAsTopLevelForm";
         }
         public void AttachGD()
         {
-            this.AttachAsGuiDockable(MsAddinAndKeyIn.MsAddin.Addin, "AttachAsGuiDockable");
+            this.AttachAsGuiDockable(AddinAndKeyIn.MsAddin.Addin, "AttachAsGuiDockable");
             label1.Text = "AttachAsGuiDockable";
         }
         public void AttachTS()
         {
-            this.AttachToToolSettings(MsAddinAndKeyIn.MsAddin.Addin);
+            this.AttachToToolSettings(AddinAndKeyIn.MsAddin.Addin);
             label1.Text = "AttachToToolSettings";
         }
         public void AttachPW()
         {
-            this.AttachToPopupWindow(MsAddinAndKeyIn.MsAddin.Addin);
+            this.AttachToPopupWindow(AddinAndKeyIn.MsAddin.Addin);
             label1.Text = "AttachToPopupWindow";
         }
         public bool GetDockedExtent(GuiDockPosition dockPosition, ref GuiDockExtent extentFlag, ref Size dockSize)

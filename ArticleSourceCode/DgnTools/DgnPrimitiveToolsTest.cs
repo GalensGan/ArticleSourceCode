@@ -68,7 +68,8 @@ namespace ArticleSourceCode.DgnTools
         protected override bool OnDataButton(DgnButtonEvent ev)
         {
             var result = true;
-           _logger.InfoFormat("{0}-{1}-{2}","DgnTool", "OnDataButton", "抽象");
+            Utils.Message.Console.WriteLine($"OnDynamicFrame: {ev.Point.X},{ev.Point.Y},{ev.Point.Z}");
+            _logger.InfoFormat("{0}-{1}-{2}","DgnTool", "OnDataButton", "抽象");
 
             return result;
         }
@@ -234,6 +235,7 @@ namespace ArticleSourceCode.DgnTools
             return result;
         }
         protected override void OnDynamicFrame(DgnButtonEvent ev) {
+            Utils.Message.Console.WriteLine($"OnDynamicFrame: {ev.Point.X},{ev.Point.Y},{ev.Point.Z}");
            _logger.InfoFormat("{0}-{1}","Primitive", "OnDynamicFrame");
         }
         // protected override void OnReinitialize() { }
