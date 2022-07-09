@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArticleSourceCode", "Articl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{EE800505-2DC1-4E3D-94FA-1FB0A959F178}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{EA6B9871-16B4-4A35-B048-897798D2F857}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArticleUtils", "Utils\ArticleUtils.csproj", "{EA6B9871-16B4-4A35-B048-897798D2F857}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

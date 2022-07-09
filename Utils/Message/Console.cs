@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Runtime.InteropServices;
 
-namespace Utils.Message
+namespace ArticleUtils.Message
 {
     /// <summary>
     /// MS 中的输出窗体

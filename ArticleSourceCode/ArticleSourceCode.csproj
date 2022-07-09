@@ -33,11 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bentley.MicroStation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4bf6c96a266e58d4, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(Microstation)\Assemblies\Bentley.MicroStation.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="MSAddinTest, Version=0.3.0.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\MSAddinTest.dll</HintPath>
@@ -61,12 +56,40 @@
       <HintPath>$(Microstation)\Bentley.DgnPlatformNET.dll</HintPath>
       <private>False</private>
     </Reference>
+    <Reference Include="Bentley.EC.Persistence3">
+      <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.EC.Persistence3.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.ECObjects.Interop3">
+      <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.ECObjects.Interop3.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.ECObjects.MixedMode3">
+      <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.ECObjects.MixedMode3.dll</HintPath>
+      <private>False</private>
+    </Reference>
     <Reference Include="Bentley.ECObjects3">
       <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.ECObjects3.dll</HintPath>
       <private>False</private>
     </Reference>
+    <Reference Include="Bentley.ECSystem3">
+      <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.ECSystem3.dll</HintPath>
+      <private>False</private>
+    </Reference>
     <Reference Include="Bentley.General.1.0">
       <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.General.1.0.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.Platform">
+      <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.Platform.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.UI">
+      <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.UI.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.Windowing">
+      <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.Windowing.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="Bentley.GeometryNET">
@@ -81,12 +104,68 @@
       <HintPath>$(Microstation)\Bentley.GeometryNET.Structs.dll</HintPath>
       <private>False</private>
     </Reference>
+    <Reference Include="Bentley.Interop.MicroStationDGN">
+      <HintPath>$(Microstation)\Assemblies\Bentley.Interop.MicroStationDGN.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.MicroStation">
+      <HintPath>$(Microstation)\Assemblies\Bentley.MicroStation.dll</HintPath>
+      <private>False</private>
+    </Reference>
     <Reference Include="Bentley.MicroStation.Interfaces.1.0">
       <HintPath>$(Microstation)\Assemblies\Bentley.MicroStation.Interfaces.1.0.dll</HintPath>
       <private>False</private>
     </Reference>
-    <Reference Include="Bentley.Platform">
-      <HintPath>$(Microstation)\Assemblies\ECFramework\Bentley.Platform.dll</HintPath>
+    <Reference Include="Bentley.MicroStation.Ribbon">
+      <HintPath>$(Microstation)\Assemblies\Bentley.MicroStation.Ribbon.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.MicroStation.WinForms.Controls">
+      <HintPath>$(Microstation)\Assemblies\Bentley.MicroStation.WinForms.Controls.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.MicroStation.WPF">
+      <HintPath>$(Microstation)\Assemblies\Bentley.MicroStation.WPF.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.MicroStation.WPF">
+      <HintPath>$(Microstation)\Assemblies\Bentley.MicroStation.WPF.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.PrintAPI">
+      <HintPath>$(Microstation)\Assemblies\Bentley.PrintAPI.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.PrintDefinitions">
+      <HintPath>$(Microstation)\Assemblies\Bentley.PrintDefinitions.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.PrintEngine">
+      <HintPath>$(Microstation)\Assemblies\Bentley.PrintEngine.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.PrinterConfigurationEditor">
+      <HintPath>$(Microstation)\Assemblies\Bentley.PrinterConfigurationEditor.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.PrintFoundation">
+      <HintPath>$(Microstation)\Assemblies\Bentley.PrintFoundation.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.PrintManager">
+      <HintPath>$(Microstation)\Assemblies\Bentley.PrintManager.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.TerrainModelNET">
+      <HintPath>$(Microstation)\Assemblies\Bentley.TerrainModelNET.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.TerrainModelNET.Formats">
+      <HintPath>$(Microstation)\Assemblies\Bentley.TerrainModelNET.Formats.dll</HintPath>
+      <private>False</private>
+    </Reference>
+    <Reference Include="Bentley.TerrainModel.ElementTemplate">
+      <HintPath>$(Microstation)\Assemblies\Bentley.TerrainModel.ElementTemplate.dll</HintPath>
       <private>False</private>
     </Reference>
     <Reference Include="ustation">
@@ -101,9 +180,12 @@
     <Compile Include="Adaters\AdapterTest.Designer.cs">
       <DependentUpon>AdapterTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="CurveVectorFraction\CurveVectorFractionTest.cs" />
+    <Compile Include="Bspline\TestBspline.cs" />
     <Compile Include="DgnTools\DgnElementSetToolsTest.cs" />
+    <Compile Include="DgnTools\DgnElementSetToolsTest_PrimitiveTool.cs" />
     <Compile Include="DgnTools\DgnPrimitiveToolsTest.cs" />
+    <Compile Include="DgnTools\DgnElementSetToolsTest_DgnTool.cs" />
+    <Compile Include="DgnTools\DgnPrimitiveToolTest_DgnTool.cs" />
     <Compile Include="DgnTools\Dump.cs" />
     <Compile Include="DgnTools\NewToolFactory.cs" />
     <Compile Include="MessageManager\MessageHandleForm.cs">
@@ -142,9 +224,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Utils\Utils.csproj">
+    <ProjectReference Include="..\Utils\ArticleUtils.csproj">
       <Project>{ea6b9871-16b4-4a35-b048-897798d2f857}</Project>
-      <Name>Utils</Name>
+      <Name>ArticleUtils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

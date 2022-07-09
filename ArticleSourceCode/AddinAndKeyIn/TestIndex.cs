@@ -15,9 +15,16 @@ namespace ArticleSourceCode.AddinAndKeyIn
         /// </summary>
         /// <param name="arg"></param>
         [MSTest("PrimaryTool")]
-        public static void TestDgnPrimaryTool(IMSTestArg arg)
+        public static void TestDgnPrimaryTool(string arg)
         {
-            NewToolFactory.TestDgnPrimitiveTool();
+            NewToolFactory.TestDgnPrimitiveTool();            
+        }
+
+        [MSTest("ElementSetTool")]
+        public static void TestDgnElemenetSetTool(string arg)
+        {
+            var tool = new DgnElementSetToolsTest();
+            tool.InstallTool();
         }
     }
 }

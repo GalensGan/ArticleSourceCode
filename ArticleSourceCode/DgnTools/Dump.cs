@@ -1,16 +1,28 @@
-﻿using System;
+﻿using Bentley.DgnPlatformNET;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ArticleUtils;
 
 namespace ArticleSourceCode.DgnTools
 {
-    class Dump
+    public static class Dump
     {
-        public static void WriteLine(params string[] messages)
+        public static void DgnToolDebug(this DgnTool tool, params object[] msgs)
         {
-            Console.WriteLine(string.Join("-",messages));
+            LogHelper.Debug("DgnTool:" + string.Join("-",msgs));
+        }
+
+        public static void DgnPrimitieToolDebug(this DgnPrimitiveTool tool, params object[] msgs)
+        {
+            LogHelper.Debug("DgnPrimitiveTool:" + string.Join("-", msgs));
+        }
+
+        public static void DgnElemenetSetToolDebug(this DgnElementSetTool tool, params object[] msgs)
+        {
+            LogHelper.Debug("DgnElementSetTool:" + string.Join("-", msgs));
         }
     }
 }

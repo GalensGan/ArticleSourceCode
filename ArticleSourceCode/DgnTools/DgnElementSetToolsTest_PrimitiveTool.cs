@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace ArticleSourceCode.DgnTools
 {
-    partial class DgnPrimitiveToolsTest : DgnPrimitiveTool
+    partial class DgnElementSetToolsTest
     {
 
-        public DgnPrimitiveToolsTest() : base(0, 0)
+        public DgnElementSetToolsTest(int toolId) : base(toolId, 0)
         {            
             this.DgnPrimitieToolDebug("----------------------------- dgnPrimitiveToolsTest begin --------------------------");
         }
@@ -19,7 +19,8 @@ namespace ArticleSourceCode.DgnTools
         #region 动态显示
         //protected internal bool DynamicsStarted
         protected override void BeginDynamics()
-        {            
+        {
+            
             this.DgnPrimitieToolDebug("BeginDynamics");
         }
 
@@ -62,6 +63,12 @@ namespace ArticleSourceCode.DgnTools
         }
         #endregion
 
+        // protected override void OnReinitialize() { }
+        protected override void OnRestartTool()
+        {
+            this.DgnPrimitieToolDebug("OnRestartTool");
+        }
+
         #region 回退
         protected override void OnUndoPreviousStep()
         {
@@ -69,10 +76,5 @@ namespace ArticleSourceCode.DgnTools
         }
         #endregion
 
-        // protected override void OnReinitialize() { }
-        protected override void OnRestartTool()
-        {
-            this.DgnPrimitieToolDebug("OnRestartTool");
-        }        
     }
 }
